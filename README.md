@@ -1,7 +1,11 @@
 # Projenin amacı
 
-Bu projeyi bitcoinde mimarisini daha iyi anlamak ve programlama yeteneklerimi geliştirmk için geliştirdim. 
-Bitcoinde kullanılan algoritmaları araştırarak yeni algoritmalar öğrendim. 
+Bu projeyi bitcoin'in mimarisini daha iyi anlamak ve programlama yeteneklerimi geliştirmek için geliştirdim. 
+Bitcoinde kullanılan algoritmaları araştırarak yeni algoritmalar öğrendim. Bu algoritmalar;
+- ECDSA (Elliptic Curve Digital Signature Algorithm)
+- Merkle Tree (Merkle Ağacı)
+- Public key and Private Key (Genel Anahtar ve Özel Anahtar)
+- SHA-256 (Secure Hash Algorithm 256-bit)
 
 ## Kullanılan teknolojiler ve algoritmalar
   Projenin içerisinde kullandığım algoritma ve teknolojiler;
@@ -17,11 +21,11 @@ Bitcoinde kullanılan algoritmaları araştırarak yeni algoritmalar öğrendim.
   Bitcoin transferlerinde eliptik eğri dijital imzası kullanılarak güvenli bir şekilde işlemler(transactions) imzalanır.
   
 - **Blok İçeriği (Block Content)**: Blok zincirindeki her bir bloğun içerisinde veriler tutulur ve bloğun geçerliliğini doğrular.
-  Bitcoinde bir blockun içerisinde şunlar vardır;
-    blok indexi, önceki bloğun hashi, merkle root hashi,bloğun oluşma zamanı, nonce değeri, difficult değeri ve o bloğa ait transactionların listesi bulunur.
+  Bitcoinde bir bloğun içerisinde şunlar vardır;
+    blok indexi, önceki bloğun hashi, merkle root hashi,bloğun oluşma zamanı, nonce değeri, difficult değeri ve o bloğa ait işlemlerin listesi bulunur.
    
 - **Merkle Kökü (Merkle Root)**: Bir Merkle ağacının köküdür ve blok içindeki tüm işlemlerin bütünlüğünü doğrular.
-  Merkle root algoritması bitcoin transferlerin id'lerinden tek bir root hash çıkartır ve bunu block headerında merkle root olarak saklar. bu bilgi ile yapılacak olan işlemleri doğrular.
+  Merkle root algoritması bitcoin transferlerin id'lerinden tek bir root hash çıkartır ve bunu blok headerında merkle root olarak saklar. Bu bilgi ile yapılacak olan işlemleri doğrular.
 
 ## Kurulum
 
