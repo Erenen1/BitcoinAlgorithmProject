@@ -2,13 +2,15 @@ import express from "express";
 const app = express();
 import cors from "cors";
 import { connectToDatabase } from "./models/db";
-
+import dotenv from "dotenv"
+dotenv.config();
 
 
 import accountRoutes from "./routes/account"
 import blockRoutes from "./routes/block"
 import transactionRoutes from "./routes/transaction"
 
+console.log(process.env.DATABASE_URL)
 connectToDatabase();
 
 app.use(express.json());

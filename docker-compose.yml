@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  node_app:
+    container_name: node_server
+    ports:
+      - 151:3000
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    networks:
+      - my_bridge_network
+    environment:
+      - DATABASE_URL=mongodb://my_database/BitcoinAlgorithm
+
+  database:
+    container_name: my_database
+    image: mongo
+    ports:
+      - 150:27017
+    networks:
+      - my_bridge_network
+    volumes:
+      - mongo_database_volume:/data/db
+
+
+networks:
+  my_bridge_network:
+    driver: bridge
+
+volumes:
+  mongo_database_volume:
+    driver: local
