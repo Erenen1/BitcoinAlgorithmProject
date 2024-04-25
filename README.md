@@ -36,3 +36,13 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip ed
 3. ``cd BitcoinAlgorithmProject/``
 4. ``npm install``
 5. ``npm run start``
+
+## Docker ile kurulum
+1. ``git clone https://github.com/Erenen1/BitcoinAlgorithmProject.git``
+2. ``cd BitcoinAlgorithmProject/``
+3. ``docker-compose up``
+Sunucu ``http://localhost:8080`` üzerinden çalışıyor olucaktır.
+MongoDB Compass indirip ``mongodb://localhost:60600`` bağlanarak veritabanını kontrol edebilirsiniz.
+
+
+
