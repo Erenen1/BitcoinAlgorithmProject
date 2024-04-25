@@ -4,7 +4,7 @@ services:
   node_app:
     container_name: node_server
     ports:
-      - 151:3000
+      - 8080:3000
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -17,7 +17,7 @@ services:
     container_name: my_database
     image: mongo
     ports:
-      - 150:27017
+      - 60600:27017
     networks:
       - my_bridge_network
     volumes:
